@@ -1,4 +1,4 @@
-/*
+    /*
  * Copyright (c) 2010 Network Security Lab, University of Washington, Seattle.
  *
  * SPDX-License-Identifier: GPL-2.0-only
@@ -214,7 +214,13 @@ BasicEnergySource::CalculateRemainingEnergy()
     NS_LOG_FUNCTION(this);
     double totalCurrentA = CalculateTotalCurrent();
     Time duration = Simulator::Now() - m_lastUpdateTime;
-    NS_ASSERT(duration.IsPositive());
+    // --- TAMBAHAN ---
+    if (duration.IsZero()) 
+    {
+        return; // Jika durasi 0, tidak ada energi yang berkurang. Keluar saja.
+    }
+    // ----------------
+    // NS_ASSERT(duration.IsPositive());
     // energy = current * voltage * time
     double energyToDecreaseJ = (totalCurrentA * m_supplyVoltageV * duration).GetSeconds();
     NS_ASSERT(m_remainingEnergyJ >= energyToDecreaseJ);

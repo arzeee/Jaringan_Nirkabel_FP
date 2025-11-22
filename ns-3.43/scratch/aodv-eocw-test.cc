@@ -8,62 +8,75 @@
 #include "ns3/ssid.h"
 #include "ns3/basic-energy-source-helper.h"
 #include "ns3/wifi-radio-energy-model-helper.h"
-#include "ns3/netanim-module.h" // <-- Include NetAnim
-#include "ns3/network-module.h" // <-- TAMBAHKAN BARIS INI
-#include <string> // <-- DIPERLUKAN UNTUK std::to_string
+#include "ns3/netanim-module.h"
+#include "ns3/network-module.h" 
+#include <string>
 
 using namespace ns3;
 using namespace ns3::energy; 
 
 NS_LOG_COMPONENT_DEFINE("AodvEocwTest");
 
-// --- TAMBAHKAN VARIABEL TRACING ---
+// --- HAPUS DEFINISI KELAS MANUAL, GUNAKAN BAWAAN NS-3 ---
+
+// --- VARIABEL TRACING ---
 uint32_t g_packetsSent = 0;
 uint32_t g_packetsReceived = 0;
 Time g_totalDelay = Seconds(0.0);
-// --- AKHIR TAMBAHAN ---   
 
 /**
- * \brief Fungsi ini dipanggil setiap kali server menerima paket.
+ * \brief Fungsi ini dipanggil setiap kali SERVER (Node 0) menerima paket.
  */
 void OnPacketReceived(Ptr<const Packet> packet)
 {
     g_packetsReceived++;
     
-    // Coba baca timestamp yang ditambahkan oleh klien
     TimestampTag timestamp;
+    // Menggunakan TimestampTag bawaan ns-3
     if (packet->PeekPacketTag(timestamp))
     {
         Time txTime = timestamp.GetTimestamp();
         Time rxTime = Simulator::Now();
-        g_totalDelay += (rxTime - txTime); // Akumulasikan delay
+        Time delay = rxTime - txTime;
+        
+        if (delay.IsPositive()) {
+            g_totalDelay += delay;
+        }
     }
 }
 
 /**
- * \brief Fungsi ini dipanggil setiap kali klien mengirim paket.
+ * \brief Fungsi ini dipanggil setiap kali KLIEN mengirim paket.
  */
 void OnPacketSent(Ptr<const Packet> packet)
 {
     g_packetsSent++;
+    
+    // 1. Buat Tag dengan waktu sekarang menggunakan TimestampTag bawaan ns-3
+    TimestampTag tag;
+    tag.SetTimestamp(Simulator::Now());
+    
+    // 2. Tempelkan tag ke paket.
+    // PERBAIKAN: Menggunakan PeekPointer (Huruf P besar)
+    const_cast<Packet*>(PeekPointer(packet))->AddPacketTag(tag);
 }
 
 int
 main(int argc, char* argv[])
 {
-    // --- Konfigurasi Simulasi (Disesuaikan dengan Paper) ---
-    uint32_t numNodes = 40;     // Diubah dari 25 (sesuai 5.2.1, 5.2.2)
-    double simTime = 200.0;     // Sesuai paper (5.2.1, 5.2.3)
-    double nodeSpeed = 5.0;     // Diubah dari 0.0 (sesuai 5.2.2, 5.2.3, 5.2.4)
-    double initialEnergy = 5.0; // Diubah dari 10.0 (sesuai 5.2.4)
-    // UBAH BARIS INI (AGAR LEBIH PADAT)
-    double arenaX = 1000.0;      // Diperkecil untuk meningkatkan kepadatan
-    double arenaY = 1000.0;      // Diperkecil untuk meningkatkan kepadatan
+    // --- Konfigurasi Simulasi ---
+    uint32_t numNodes = 40;    
+    double simTime = 200.0;    
+    double nodeSpeed = 5.0;    
+    double initialEnergy = 50.0; 
+    double arenaX = 100.0;     
+    double arenaY = 100.0;     
 
     CommandLine cmd(__FILE__);
     cmd.AddValue("numNodes", "Jumlah node", numNodes);
     cmd.AddValue("simTime", "Waktu simulasi (detik)", simTime);
     cmd.AddValue("nodeSpeed", "Kecepatan node (m/s)", nodeSpeed);
+    cmd.AddValue("initialEnergy", "Energi awal (J)", initialEnergy);
     cmd.Parse(argc, argv);
 
     // --- Node & Kontainer ---
@@ -90,53 +103,43 @@ main(int argc, char* argv[])
     Ssid ssid = Ssid("ns3-aodv-test");
     WifiHelper wifi;
     
-    // BIARKAN KOSONG
-    // ns-3 secara otomatis akan menggunakan default yang stabil:
-    // Standar: 802.11b
-    // Manajer Rate: ArfWifiManager
+    // Gunakan standar 802.11b agar jangkauan lebih jauh/stabil
+    wifi.SetStandard(WIFI_STANDARD_80211b);
+    wifi.SetRemoteStationManager("ns3::ConstantRateWifiManager",
+                                 "DataMode", StringValue("DsssRate1Mbps"),
+                                 "ControlMode", StringValue("DsssRate1Mbps"));
 
     NetDeviceContainer devices = wifi.Install(phy, mac, nodes);
 
-    // --- Mobilitas (Mode Bergerak Sesuai Paper) ---
+    // --- Mobilitas ---
     MobilityHelper mobility;
-
-    // 1. Buat batas area untuk posisi awal dan gerakan (sesuai Table 7)
     Ptr<RandomRectanglePositionAllocator> positionAlloc = CreateObject<RandomRectanglePositionAllocator>();
 
-    // Buat variabel acak untuk X (Cara baru untuk ns-3 >= 3.40)
     Ptr<UniformRandomVariable> xRandom = CreateObject<UniformRandomVariable>();
     xRandom->SetAttribute("Min", DoubleValue(0.0));
     xRandom->SetAttribute("Max", DoubleValue(arenaX));
-    positionAlloc->SetX(xRandom); // Berikan Ptr ke objek, bukan StringValue
+    positionAlloc->SetX(xRandom);
 
-    // Buat variabel acak untuk Y (Cara baru untuk ns-3 >= 3.40)
     Ptr<UniformRandomVariable> yRandom = CreateObject<UniformRandomVariable>();
     yRandom->SetAttribute("Min", DoubleValue(0.0));
     yRandom->SetAttribute("Max", DoubleValue(arenaY));
-    positionAlloc->SetY(yRandom); // Berikan Ptr ke objek, bukan StringValue
+    positionAlloc->SetY(yRandom); 
     
     mobility.SetPositionAllocator(positionAlloc);
 
-    // 2. Atur model mobilitas (Random Waypoint)
-    // Kecepatan diatur oleh variabel nodeSpeed
-    // Waktu berhenti (Pause) 1 detik
     std::string speedString = "ns3::ConstantRandomVariable[Constant=" + std::to_string(nodeSpeed) + "]";
     std::string pauseString = "ns3::ConstantRandomVariable[Constant=1.0]";
 
     mobility.SetMobilityModel("ns3::RandomWaypointMobilityModel",
                               "Speed", StringValue(speedString),
                               "Pause", StringValue(pauseString),
-                              "PositionAllocator", PointerValue(positionAlloc)); // Gunakan allocator yang sama untuk batas gerakan
+                              "PositionAllocator", PointerValue(positionAlloc));
 
-    // 3. Install mobilitas
     mobility.Install(nodes);
 
     // --- Stack Internet (AODV) ---
     AodvHelper aodv; 
-    aodv.Set("EnableHello", BooleanValue(false)); // <-- TAMBAHKAN BARIS INI
-    // --- TAMBAHKAN BARIS INI ---
-    // Memaksa HANYA node tujuan untuk membalas RREQ.
-    // Ini penting agar logika EOCW Anda di node tujuan bisa berjalan.
+    aodv.Set("EnableHello", BooleanValue(false)); 
     aodv.Set("DestinationOnly", BooleanValue(true));
     InternetStackHelper stack;
     stack.SetRoutingHelper(aodv); 
@@ -147,15 +150,17 @@ main(int argc, char* argv[])
     Ipv4InterfaceContainer interfaces = address.Assign(devices);
 
     // --- Aplikasi (UDP Echo) ---
-    // Server di node 0
+    
+    // 1. Server di node 0
     UdpEchoServerHelper echoServer(9); 
     ApplicationContainer serverApps = echoServer.Install(nodes.Get(0));
     serverApps.Start(Seconds(1.0));
     serverApps.Stop(Seconds(simTime));
-    // --- MENGHUBUNGKAN TRACE SERVER ---
+    
+    // Trace RX di server
     serverApps.Get(0)->TraceConnectWithoutContext("Rx", MakeCallback(&OnPacketReceived));
 
-    // Klien di node terakhir (numNodes - 1)
+    // 2. Klien di node terakhir
     UdpEchoClientHelper echoClient(interfaces.GetAddress(0), 9); 
     echoClient.SetAttribute("MaxPackets", UintegerValue(50));
     echoClient.SetAttribute("Interval", TimeValue(Seconds(1.0)));
@@ -164,17 +169,15 @@ main(int argc, char* argv[])
     ApplicationContainer clientApps = echoClient.Install(nodes.Get(numNodes - 1));
     clientApps.Start(Seconds(2.01));
     clientApps.Stop(Seconds(simTime));
-    // --- MENGHUBUNGKAN TRACE KLIEN ---
+    
+    // Trace TX di klien
     clientApps.Get(0)->TraceConnectWithoutContext("Tx", MakeCallback(&OnPacketSent));
 
     // --- Logging & Animasi ---
-    // --- Logging (Aktifkan log AODV level INFO) ---
-    // Ini akan menyembunyikan log DEBUG/FUNCTION yang berisik
-    // tapi akan MENUNJUKKAN log INFO EOCW kita.
     LogComponentEnable("AodvRoutingProtocol", LOG_LEVEL_INFO);
 
     AnimationInterface anim("aodv-eocw-animation.xml");
-    anim.SetMobilityPollInterval(Seconds(1)); // Update posisi di NetAnim setiap 1s
+    anim.SetMobilityPollInterval(Seconds(1)); 
     anim.EnablePacketMetadata(true);
 
     // --- Menjalankan Simulasi ---
@@ -195,6 +198,17 @@ main(int argc, char* argv[])
         avgDelay = g_totalDelay.GetMilliSeconds() / (double)g_packetsReceived;
     }
 
+    double shutdownThreshold = 0.1; 
+    uint32_t liveNodes = 0;
+    for (uint32_t i = 0; i < energySources.GetN(); ++i)
+    {
+        if (energySources.Get(i)->GetRemainingEnergy() > shutdownThreshold)
+        {
+            liveNodes++;
+        }
+    }
+    double survivalRate = ((double)liveNodes / (double)numNodes) * 100.0;
+
     std::cout << "--- HASIL SIMULASI (AODV-EOCW) ---" << std::endl;
     std::cout << " Waktu Simulasi:   " << simTime << " detik" << std::endl;
     std::cout << " Jumlah Node:      " << numNodes << std::endl;
@@ -206,8 +220,9 @@ main(int argc, char* argv[])
     std::cout << " Total Paket Diterima: " << g_packetsReceived << std::endl;
     std::cout << " Packet Delivery Rate (PDR): " << pdr << " %" << std::endl;
     std::cout << " Average End-to-End Delay: " << avgDelay << " ms" << std::endl;
+    std::cout << " Node Hidup:                 " << liveNodes << " / " << numNodes << std::endl;
+    std::cout << " Survival Rate:              " << survivalRate << " %" << std::endl;
     std::cout << " ----------------------------------" << std::endl;
-    // --- AKHIR STATISTIK ---
 
     return 0;
 }

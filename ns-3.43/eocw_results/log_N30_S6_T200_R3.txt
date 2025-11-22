@@ -1,0 +1,947 @@
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::BasicEnergySource; use ns3::energy::BasicEnergySource instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+Deprecation warning for name ns3::LrWpanNetDevice; use ns3::lrwpan::LrWpanNetDevice instead
+AODV: Energi awal node 0 adalah 5 J
+AODV: Energi awal node 1 adalah 5 J
+AODV: Energi awal node 2 adalah 5 J
+AODV: Energi awal node 3 adalah 5 J
+AODV: Energi awal node 4 adalah 5 J
+AODV: Energi awal node 5 adalah 5 J
+AODV: Energi awal node 6 adalah 5 J
+AODV: Energi awal node 7 adalah 5 J
+AODV: Energi awal node 8 adalah 5 J
+AODV: Energi awal node 9 adalah 5 J
+AODV: Energi awal node 10 adalah 5 J
+AODV: Energi awal node 11 adalah 5 J
+AODV: Energi awal node 12 adalah 5 J
+AODV: Energi awal node 13 adalah 5 J
+AODV: Energi awal node 14 adalah 5 J
+AODV: Energi awal node 15 adalah 5 J
+AODV: Energi awal node 16 adalah 5 J
+AODV: Energi awal node 17 adalah 5 J
+AODV: Energi awal node 18 adalah 5 J
+AODV: Energi awal node 19 adalah 5 J
+AODV: Energi awal node 20 adalah 5 J
+AODV: Energi awal node 21 adalah 5 J
+AODV: Energi awal node 22 adalah 5 J
+AODV: Energi awal node 23 adalah 5 J
+AODV: Energi awal node 24 adalah 5 J
+AODV: Energi awal node 25 adalah 5 J
+AODV: Energi awal node 26 adalah 5 J
+AODV: Energi awal node 27 adalah 5 J
+AODV: Energi awal node 28 adalah 5 J
+AODV: Energi awal node 29 adalah 5 J
+EOCW (Node 2) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 1 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 1
+EOCW (Node 12) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 1
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.30 | Hops: 1 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.30 dengan skor 1
+EOCW (Node 29) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.1 | Hops: 1 | Energy: 1 | Congestion: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 2 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 2
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 2
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.30 | Hops: 1 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.30 dengan skor 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 3 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 3
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 3
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.30 | Hops: 1 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.30 dengan skor 1
+EOCW (Node 29) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.1 | Hops: 1 | Energy: 1 | Congestion: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 4 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 4
+EOCW (Node 26) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 4
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.24 | Hops: 2 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.24 dengan skor 1
+EOCW (Node 29) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.24 | Hops: 2 | Energy: 1 | Congestion: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 5 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 5
+EOCW (Node 23) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 5
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.12 | Hops: 3 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 0.93464
+EOCW: Rute terbaik dipilih via 10.1.1.12 dengan skor 0.93464
+EOCW (Node 29) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.8 | Hops: 3 | Energy: 1 | Congestion: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 29) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 29): RREQ ID 1 diterima. Menambahkan ke cache.
+EOCW (Node 29): Memulai timer 20ms untuk RREQ 1
+EOCW (Node 3) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 29): Timer berakhir. Memilih rute terbaik untuk RREQ ID 1
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.21 | Hops: 3 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 0.93464
+EOCW: Rute terbaik dipilih via 10.1.1.21 dengan skor 0.93464
+EOCW (Node 0) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.2 | Hops: 3 | Energy: 1 | Congestion: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 6 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 6
+EOCW (Node 23) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 3 | NodesIn: 4, NodesOut: 5 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 6
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.17 | Hops: 3 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 0.93464
+EOCW: Rute terbaik dipilih via 10.1.1.17 dengan skor 0.93464
+EOCW (Node 29) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.23 | Hops: 3 | Energy: 1 | Congestion: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 29) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 29): RREQ ID 2 diterima. Menambahkan ke cache.
+EOCW (Node 29): Memulai timer 20ms untuk RREQ 2
+EOCW (Node 19) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 29): Timer berakhir. Memilih rute terbaik untuk RREQ ID 2
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.5 | Hops: 2 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.5 dengan skor 1
+EOCW (Node 0) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.5 | Hops: 2 | Energy: 1 | Congestion: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 29) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16): RREQ ID 1 diterima. Menambahkan ke cache.
+EOCW (Node 16): Memulai timer 20ms untuk RREQ 1
+EOCW (Node 6) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 16): Timer berakhir. Memilih rute terbaik untuk RREQ ID 1
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.23 | Hops: 1 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.23 dengan skor 1
+EOCW (Node 22) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.17 | Hops: 1 | Energy: 1 | Congestion: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 7 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 7
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 7
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.30 | Hops: 1 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.30 dengan skor 1
+EOCW (Node 29) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.1 | Hops: 1 | Energy: 1 | Congestion: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 8 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 8
+EOCW (Node 28) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 8
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.16 | Hops: 2 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.16 dengan skor 1
+EOCW (Node 29) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.16 | Hops: 2 | Energy: 1 | Congestion: 1
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 29) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 29): RREQ ID 3 diterima. Menambahkan ke cache.
+EOCW (Node 29): Memulai timer 20ms untuk RREQ 3
+EOCW (Node 17) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 3 | NodesIn: 4, NodesOut: 5 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 16): RREQ ID 2 diterima. Menambahkan ke cache.
+EOCW (Node 16): Memulai timer 20ms untuk RREQ 2
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 29) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 29): Timer berakhir. Memilih rute terbaik untuk RREQ ID 3
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.26 | Hops: 3 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 0.93464
+EOCW: Rute terbaik dipilih via 10.1.1.26 dengan skor 0.93464
+EOCW (Node 16): Timer berakhir. Memilih rute terbaik untuk RREQ ID 2
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.23 | Hops: 1 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.23 dengan skor 1
+EOCW (Node 22) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.17 | Hops: 1 | Energy: 1 | Congestion: 1
+EOCW (Node 0) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.15 | Hops: 3 | Energy: 1 | Congestion: 1
+EOCW (Node 21) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 14) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0): RREQ ID 9 diterima. Menambahkan ke cache.
+EOCW (Node 0): Memulai timer 20ms untuk RREQ 9
+EOCW (Node 3) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 0): Timer berakhir. Memilih rute terbaik untuk RREQ ID 9
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.14 | Hops: 2 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.14 dengan skor 1
+EOCW (Node 29) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.14 | Hops: 2 | Energy: 1 | Congestion: 1
+EOCW (Node 25) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 25): RREQ ID 1 diterima. Menambahkan ke cache.
+EOCW (Node 25): Memulai timer 20ms untuk RREQ 1
+EOCW (Node 18) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 1) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 10) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 24) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 12) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 29) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 5) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 13) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 23) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 6) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 22) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 9) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 11) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 20) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 28) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 15) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 7) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 19) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 26) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 27) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 17) RecvRequest: | Hops: 0 | NodesIn: 1, NodesOut: 2 | C_in: 1, C_new: 1
+EOCW (Node 4) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 21) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 8) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 3) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 2) RecvRequest: | Hops: 2 | NodesIn: 3, NodesOut: 4 | C_in: 1, C_new: 1
+EOCW (Node 0) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 16) RecvRequest: | Hops: 1 | NodesIn: 2, NodesOut: 3 | C_in: 1, C_new: 1
+EOCW (Node 25): Timer berakhir. Memilih rute terbaik untuk RREQ ID 1
+EOCW: Memilih rute terbaik dari 1 kandidat.
+  - KANDIDAT: Path via 10.1.1.15 | Hops: 1 | Energy: 1 | Congestion: 1 | SKOR AKHIR: 1
+EOCW: Rute terbaik dipilih via 10.1.1.15 dengan skor 1
+EOCW (Node 14) RecvReply: RUTE DITEMUKAN! | Via: 10.1.1.26 | Hops: 1 | Energy: 1 | Congestion: 1
+NS_ASSERT failed, cond="duration.IsPositive()", +0.000000000s -1 file=/home/user/ns-allinone-3.43/ns-3.43/src/energy/model/basic-energy-source.cc, line=217
+NS_FATAL, terminating
+terminate called without an active exception
+Command 'build/scratch/ns3.43-aodv-eocw-test-default --numNodes=30 --simTime=200 --nodeSpeed=6 --initialEnergy=5.0 --RngRun=3' died with <Signals.SIGABRT: 6>.
