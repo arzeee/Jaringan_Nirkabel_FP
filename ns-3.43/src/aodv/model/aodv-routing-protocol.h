@@ -250,6 +250,12 @@ class RoutingProtocol : public Ipv4RoutingProtocol
      */
     void NotifyTxError(WifiMacDropReason reason, Ptr<const WifiMpdu> mpdu);
 
+
+    // Fungsi keanggotaan segitiga (Triangular Membership Function)
+    double FuzzyTriangle(double value, double a, double b, double c);
+    
+    // Fungsi utama untuk mendapatkan bobot dinamis
+    std::vector<double> GetFuzzyWeights(double energyScore, double congestionScore);
     // Protocol parameters.
     uint32_t m_rreqRetries; ///< Maximum number of retransmissions of RREQ with TTL = NetDiameter to
                             ///< discover a route
@@ -558,10 +564,10 @@ class RoutingProtocol : public Ipv4RoutingProtocol
     std::map<uint32_t, ns3::Timer> m_eocwPathTimers;
     // --- AKHIR EOCW ---
     // --- TAMBAHAN EOCW: Deklarasi fungsi helper ---
-    /**
-    * \brief Mendapatkan bobot AHP berdasarkan level energi node saat ini.
-    */
-    std::vector<double> GetAhpWeights();
+    // /**
+    // * \brief Mendapatkan bobot AHP berdasarkan level energi node saat ini.
+    // */
+    // std::vector<double> GetAhpWeights();
 
     /**
     * \brief Menghitung bobot EWM (Entropy Weight Method)

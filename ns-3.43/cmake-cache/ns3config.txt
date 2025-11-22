@@ -1,8 +1,8 @@
 ---- Summary of ns-3 settings:
-Build profile                 : default
+Build profile                 : optimized
 Build directory               : /home/user/ns-allinone-3.43/ns-3.43/build
-Build with runtime asserts    : [32mON[0m
-Build with runtime logging    : [32mON[0m
+Build with runtime asserts    : OFF (not requested)
+Build with runtime logging    : OFF (not requested)
 Build version embedding       : OFF (not requested)
 BRITE Integration             : [31mOFF (Missing headers: "Brite.h" and missing libraries: "brite")[0m
 DES Metrics event collection  : OFF (not requested)

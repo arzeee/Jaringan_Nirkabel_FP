@@ -2387,6 +2387,14 @@ RoutingProtocol::DoInitialize()
     Ipv4RoutingProtocol::DoInitialize();
 }
 // --- Implementasi Fungsi Helper EOCW ---
+double
+RoutingProtocol::FuzzyTriangle(double value, double a, double b, double c)
+{
+    if (value <= a || value >= c) return 0.0;
+    if (value == b) return 1.0;
+    if (value < b) return (value - a) / (b - a);
+    return (c - value) / (c - b);
+}
 
 double
 RoutingProtocol::GetResidualEnergyScore()
@@ -2471,38 +2479,38 @@ RoutingProtocol::GetHopCountScore(uint32_t hopCount)
 
 // --- FUNGSI BARU EOCW (AHP, EWM, SCORE) ---
 
-/**
- * \brief Mendapatkan bobot AHP berdasarkan level energi node saat ini.
- * Sesuai Persamaan (3).
- */
-std::vector<double>
-RoutingProtocol::GetAhpWeights()
-{
-  double myEnergy = GetResidualEnergyScore();
+// /**
+//  * \brief Mendapatkan bobot AHP berdasarkan level energi node saat ini.
+//  * Sesuai Persamaan (3).
+//  */
+// std::vector<double>
+// RoutingProtocol::GetAhpWeights()
+// {
+//   double myEnergy = GetResidualEnergyScore();
   
-  if (myEnergy > 0.8)
-  {
-    // A1: Energi tinggi (Bobot seimbang)
-    return {0.5396, 0.297, 0.1634}; // [Congestion, Energy, Hops]
-  }
-  else if (myEnergy > 0.5)
-  {
-    // A2: Energi sedang
-    return {0.637, 0.2583, 0.1047};
-  }
-  else
-  {
-    // A3: Energi rendah (Bobot energi jadi sangat penting)
-    // Catatan: Paper sepertinya salah hitung/tulis bobot. 
-    // Saya akan pakai bobot AHP yang benar berdasarkan matriks A3
-    // [1 5 9]
-    // [1/5 1 5]
-    // [1/9 1/5 1] -> [0.7514, 0.1782, 0.0704] (Nilai dari paper)
-    // Kita akan pakai nilai dari paper
-    return {0.7514, 0.1782, 0.0704}; 
-  }
-  // Catatan: Bobot di paper dijabarkan untuk [Congestion, Energy, Hops]
-}
+//   if (myEnergy > 0.8)
+//   {
+//     // A1: Energi tinggi (Bobot seimbang)
+//     return {0.5396, 0.297, 0.1634}; // [Congestion, Energy, Hops]
+//   }
+//   else if (myEnergy > 0.5)
+//   {
+//     // A2: Energi sedang
+//     return {0.637, 0.2583, 0.1047};
+//   }
+//   else
+//   {
+//     // A3: Energi rendah (Bobot energi jadi sangat penting)
+//     // Catatan: Paper sepertinya salah hitung/tulis bobot. 
+//     // Saya akan pakai bobot AHP yang benar berdasarkan matriks A3
+//     // [1 5 9]
+//     // [1/5 1 5]
+//     // [1/9 1/5 1] -> [0.7514, 0.1782, 0.0704] (Nilai dari paper)
+//     // Kita akan pakai nilai dari paper
+//     return {0.7514, 0.1782, 0.0704}; 
+//   }
+//   // Catatan: Bobot di paper dijabarkan untuk [Congestion, Energy, Hops]
+// }
 
 /**
  * \brief Menghitung bobot EWM (Entropy Weight Method)
@@ -2616,6 +2624,85 @@ RoutingProtocol::CalculateEocwScore(const EocwPath& path,
   return score;
 }
 
+std::vector<double>
+RoutingProtocol::GetFuzzyWeights(double re, double cd)
+{
+    // re = Residual Energy Score (0.0 - 1.0)
+    // cd = Congestion Degree Score (0.0 - 1.0, makin besar makin TIDAK macet/Free)
+    
+    // 1. FUZZIFICATION (Mengubah input jadi derajat keanggotaan)
+    
+    // Energy (Low, Medium, High)
+    double re_low    = FuzzyTriangle(re, -0.1, 0.0, 0.4);
+    double re_medium = FuzzyTriangle(re, 0.2, 0.5, 0.8);
+    double re_high   = FuzzyTriangle(re, 0.6, 1.0, 1.1);
+    
+    // Congestion (Busy/LowScore, Normal, Free/HighScore)
+    // Ingat: Di kode Anda, skor CD 1.0 = Antrian Kosong (Bagus)
+    double cd_busy   = FuzzyTriangle(cd, -0.1, 0.0, 0.4); 
+    double cd_normal = FuzzyTriangle(cd, 0.2, 0.5, 0.8);
+    double cd_free   = FuzzyTriangle(cd, 0.6, 1.0, 1.1);
+
+    // 2. INFERENCE (Rule Base Sederhana)
+    // Output bobot default
+    double w_energy = 0.0;
+    double w_congestion = 0.0;
+    double w_hop = 0.0;
+    
+    // Total firing strength (untuk defuzzifikasi rata-rata terbobot)
+    double total_fire = 0.0;
+
+    // RULE 1: CRITICAL ENERGY -> Prioritas Energi Mutlak
+    // Jika Energi Low, bobot Energi sangat tinggi (misal 0.8)
+    double fire1 = re_low; 
+    w_energy += fire1 * 0.8;
+    w_congestion += fire1 * 0.1;
+    w_hop += fire1 * 0.1;
+    total_fire += fire1;
+
+    // RULE 2: CONGESTED -> Prioritas Congestion
+    // Jika Energi min Medium TAPI Macet (cd_busy), prioritas Congestion
+    double fire2 = std::min(std::max(re_medium, re_high), cd_busy);
+    w_energy += fire2 * 0.2;
+    w_congestion += fire2 * 0.7;
+    w_hop += fire2 * 0.1;
+    total_fire += fire2;
+
+    // RULE 3: IDEAL CONDITION -> Prioritas Hop Count
+    // Jika Energi High DAN Tidak Macet (cd_free), kembali ke Hop Count (Performance)
+    double fire3 = std::min(re_high, cd_free);
+    w_energy += fire3 * 0.2;
+    w_congestion += fire3 * 0.2;
+    w_hop += fire3 * 0.6;
+    total_fire += fire3;
+    
+    // RULE 4: BALANCED -> Seimbang
+    // Sisa kondisi (Medium Energy, Normal Congestion)
+    double fire4 = std::min(re_medium, cd_normal);
+    w_energy += fire4 * 0.4;
+    w_congestion += fire4 * 0.3;
+    w_hop += fire4 * 0.3;
+    total_fire += fire4;
+
+    // 3. DEFUZZIFICATION (Weighted Average)
+    if (total_fire == 0) {
+        // Fallback jika tidak ada rule yang fire (jarang terjadi)
+        return {0.33, 0.33, 0.33}; 
+    }
+    
+    std::vector<double> finalWeights;
+    finalWeights.push_back(w_congestion / total_fire); // Index 0: CD
+    finalWeights.push_back(w_energy / total_fire);     // Index 1: RE
+    finalWeights.push_back(w_hop / total_fire);        // Index 2: Hop
+    
+    // Debugging (Optional, biar kelihatan di log saat simulasi)
+    NS_LOG_INFO("FUZZY OUTPUT | Energy: " << re << " Congestion: " << cd 
+                << " -> Weights [CD:" << finalWeights[0] 
+                << ", RE:" << finalWeights[1] 
+                << ", Hop:" << finalWeights[2] << "]");
+
+    return finalWeights;
+}
 
 /**
  * \brief Fungsi timer EOCW. Dipanggil setelah RREQ pertama tiba.
@@ -2637,8 +2724,14 @@ RoutingProtocol::SelectBestEocwPath(uint32_t rreqId, Ipv4Address origin, Ipv4Add
   std::vector<EocwPath> paths = it->second;
   NS_LOG_INFO("EOCW: Memilih rute terbaik dari " << paths.size() << " kandidat."); // Ubah ke INFO
 
-  // 1. Dapatkan Bobot AHP (subjektif, dari node ini)
-  std::vector<double> ahp_w = GetAhpWeights();
+    // --- MODIFIKASI PROPOSAL: Menggunakan Fuzzy Logic ---
+    // Dapatkan metrik node saat ini
+    double currentEnergy = GetResidualEnergyScore();
+    double currentCongestion = GetCongestionDegreeScore();
+
+    // Hitung bobot adaptif menggunakan Fuzzy Logic
+    std::vector<double> ahp_w = GetFuzzyWeights(currentEnergy, currentCongestion);
+// ---------------------------------------------------
   
   // 2. Dapatkan Bobot EWM (objektif, dari data path)
   std::vector<double> ewm_mu = GetEwmWeights(paths);
