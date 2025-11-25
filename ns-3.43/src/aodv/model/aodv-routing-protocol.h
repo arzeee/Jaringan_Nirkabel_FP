@@ -253,7 +253,7 @@ class RoutingProtocol : public Ipv4RoutingProtocol
 
     // Fungsi keanggotaan segitiga (Triangular Membership Function)
     double FuzzyTriangle(double value, double a, double b, double c);
-    
+    bool m_enableFuzzy; // <-- TAMBAHKAN INI
     // Fungsi utama untuk mendapatkan bobot dinamis
     std::vector<double> GetFuzzyWeights(double energyScore, double congestionScore);
     // Protocol parameters.

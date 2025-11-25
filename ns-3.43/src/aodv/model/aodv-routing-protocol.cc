@@ -160,6 +160,7 @@ RoutingProtocol::RoutingProtocol()
       m_destinationOnly(false),
       m_gratuitousReply(true),
       m_enableHello(false),
+      m_enableFuzzy(true), // <-- Inisialisasi default
       m_routingTable(m_deletePeriod),
       m_queue(m_maxQueueLen, m_maxQueueTime),
       m_requestId(0),
@@ -330,7 +331,12 @@ RoutingProtocol::GetTypeId()
                           "Access to the underlying UniformRandomVariable",
                           StringValue("ns3::UniformRandomVariable"),
                           MakePointerAccessor(&RoutingProtocol::m_uniformRandomVariable),
-                          MakePointerChecker<UniformRandomVariable>());
+                          MakePointerChecker<UniformRandomVariable>())
+            .AddAttribute("EnableFuzzy",
+                        "True untuk menggunakan Fuzzy Logic (Usulan), False untuk AHP Statis (Paper Original)",
+                        BooleanValue(true), // Default True
+                        MakeBooleanAccessor(&RoutingProtocol::m_enableFuzzy),
+                        MakeBooleanChecker());
     return tid;
 }
 
@@ -1364,21 +1370,7 @@ RoutingProtocol::RecvRequest(Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sr
     uint32_t id = rreqHeader.GetId();
     Ipv4Address origin = rreqHeader.GetOrigin();
 
-    /*
-     *  Node checks to determine whether it has received a RREQ with the same Originator IP Address
-     * and RREQ ID. If such a RREQ has been received, the node silently discards the newly received
-     * RREQ.
-     */
-    if (m_rreqIdCache.IsDuplicate(origin, id))
-    {
-        NS_LOG_DEBUG("Ignoring RREQ due to duplicate");
-        return;
-    }
-    // --- HAPUS INCREMENT hopCount DARI SINI ---
-    // uint8_t hop = rreqHeader.GetHopCount() + 1;  <-- HAPUS JIKA ADA
-    // rreqHeader.SetHopCount(hop);                  <-- HAPUS JIKA ADA
-    
-    // --- TAMBAHAN EOCW: Perbarui metrik path ---
+    // --- TAMBAHAN EOCW: Hitung Metrik Baru (Di sini, agar bisa dipakai Destination) ---
     
     // 1. Dapatkan metrik dari node ini
     double myEnergy = GetResidualEnergyScore();
@@ -1387,41 +1379,45 @@ RoutingProtocol::RecvRequest(Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sr
     // 2. Dapatkan metrik & hop count LAMA dari header
     double old_pathMinEnergy = rreqHeader.m_pathMinEnergy;
     double old_pathAvgCongestion = rreqHeader.m_pathAvgCongestion;
-    // hopCount 0 berarti 1 node (source), hopCount 1 berarti 2 node, dst.
-    uint32_t old_node_count = rreqHeader.GetHopCount() + 1; 
+    uint8_t old_hop_count = rreqHeader.GetHopCount();
     
-    // 3. Hitung metrik BARU
-    // Energi: Ambil yang terburuk (minimum)
+    // 3. Hitung metrik BARU untuk diteruskan/disimpan
+    // Energi: Ambil yang terburuk (minimum) di sepanjang jalur
     double new_pathMinEnergy = std::min(old_pathMinEnergy, myEnergy);
     
     // Kemacetan: Hitung rata-rata baru
-    uint32_t new_node_count = old_node_count + 1;
-    double new_pathAvgCongestion = ((old_pathAvgCongestion * old_node_count) + myCongestion) / (double)new_node_count;
+    // (Rata-rata Lama * Hop Lama + Kemacetan Saya) / Hop Baru
+    uint32_t hop = old_hop_count + 1; 
+    double new_pathAvgCongestion = ((old_pathAvgCongestion * old_hop_count) + myCongestion) / (double)hop;
 
     NS_LOG_INFO("EOCW (Node " << m_ipv4->GetObject<Node>()->GetId() << ") RecvRequest:"
-                << " | Hops: " << (uint32_t)rreqHeader.GetHopCount()
-                << " | NodesIn: " << old_node_count << ", NodesOut: " << new_node_count
+                << " | Hops: " << (uint32_t)old_hop_count
+                << " | NodesIn: " << (uint32_t)old_hop_count + 1 << ", NodesOut: " << (uint32_t)hop + 1
                 << " | C_in: " << old_pathAvgCongestion << ", C_new: " << new_pathAvgCongestion);
 
-    // 4. Perbarui header RREQ untuk diteruskan
-    // Increment RREQ hop count (0 -> 1, 1 -> 2, dst)
-    uint8_t hop = rreqHeader.GetHopCount() + 1; // <-- PINDAHKAN KE SINI
-    rreqHeader.SetHopCount(hop);                // <-- PINDAHKAN KE SINI
+    // --- PERBAIKAN EOCW START ---
+    // Cek apakah kita adalah TUJUAN (Destination)
+    bool amIDestination = IsMyOwnAddress(rreqHeader.GetDst());
     
-    // Tulis kembali metrik yang sudah diperbarui ke header
-    rreqHeader.m_pathMinEnergy = new_pathMinEnergy;
-    rreqHeader.m_pathAvgCongestion = new_pathAvgCongestion;
-    // --- AKHIR EOCW ---
     /*
-     *  When the reverse route is created or updated, the following actions on the route are also
-     * carried out:
-     *  1. the Originator Sequence Number from the RREQ is compared to the corresponding destination
-     * sequence number in the route table entry and copied if greater than the existing value there
-     *  2. the valid sequence number field is set to true;
-     *  3. the next hop in the routing table becomes the node from which the  RREQ was received
-     *  4. the hop count is copied from the Hop Count in the RREQ message;
-     *  5. the Lifetime is set to be the maximum of (ExistingLifetime, MinimalLifetime), where
-     *     MinimalLifetime = current time + 2*NetTraversalTime - 2*HopCount*NodeTraversalTime
+     * LOGIKA DUPLIKAT YANG BENAR UNTUK EOCW:
+     * 1. Jika saya adalah Destination: TERIMA semua duplikat (untuk dibandingkan).
+     * 2. Jika saya Intermediate Node: TOLAK duplikat (untuk mencegah flooding loop).
+     */
+    if (m_rreqIdCache.IsDuplicate(origin, id))
+    {
+        if (!amIDestination) {
+            NS_LOG_LOGIC("Ignoring RREQ due to duplicate (Intermediate Node)");
+            return; 
+        } 
+        // Jika Destination, lanjut ke bawah! Jangan di-return!
+        NS_LOG_INFO("EOCW: Destination received ALTERNATIVE PATH (Duplicate ID) - Accepting.");
+    }
+    // --- PERBAIKAN EOCW END ---
+
+    // --- PROSES UPDATE ROUTING TABLE (REVERSE ROUTE) ---
+    /*
+     * Kita perlu entry routing ke Origin agar bisa mengirim balik RREP nanti.
      */
     RoutingTableEntry toOrigin;
     if (!m_routingTable.LookupRoute(origin, toOrigin))
@@ -1437,6 +1433,7 @@ RoutingProtocol::RecvRequest(Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sr
             /*nextHop=*/src,
             /*lifetime=*/Time(2 * m_netTraversalTime - 2 * hop * m_nodeTraversalTime));
         m_routingTable.AddRoute(newEntry);
+        toOrigin = newEntry; // Simpan referensi
     }
     else
     {
@@ -1459,9 +1456,9 @@ RoutingProtocol::RecvRequest(Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sr
         toOrigin.SetLifeTime(std::max(Time(2 * m_netTraversalTime - 2 * hop * m_nodeTraversalTime),
                                       toOrigin.GetLifeTime()));
         m_routingTable.Update(toOrigin);
-        // m_nb.Update (src, Time (AllowedHelloLoss * HelloInterval));
     }
 
+    // Update Neighbor (Hello mechanism)
     RoutingTableEntry toNeighbor;
     if (!m_routingTable.LookupRoute(src, toNeighbor))
     {
@@ -1495,60 +1492,48 @@ RoutingProtocol::RecvRequest(Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sr
                           << static_cast<uint32_t>(rreqHeader.GetHopCount()) << " ID "
                           << rreqHeader.GetId() << " to destination " << rreqHeader.GetDst());
 
-    //  A node generates a RREP if either:
-    //  (i)  it is itself the destination,
-    if (IsMyOwnAddress(rreqHeader.GetDst()))
+    // --- LOGIKA EOCW UTAMA (Hanya di Destination) ---
+    if (amIDestination)
     {
-        NS_LOG_INFO("EOCW (Node " << m_ipv4->GetObject<Node>()->GetId() << "): RREQ ID " << id << " diterima. Menambahkan ke cache.");
-        m_routingTable.LookupRoute(origin, toOrigin);
-
-        // Buat EocwPath baru
-        EocwPath newPath(rreqHeader.m_pathMinEnergy, 
-                        rreqHeader.m_pathAvgCongestion, 
-                        (uint32_t)rreqHeader.GetHopCount(), 
-                        toOrigin);
+        NS_LOG_INFO("EOCW (Node " << m_ipv4->GetObject<Node>()->GetId() << "): RREQ ID " << id << " diterima/cached.");
+        
+        // Buat EocwPath baru dengan metrik yang sudah dihitung di atas
+        EocwPath newPath(new_pathMinEnergy, 
+                         new_pathAvgCongestion, 
+                         (uint32_t)hop, 
+                         toOrigin);
 
         // Simpan di cache
         m_eocwPathCache[id].push_back(newPath);
 
         // Jika ini adalah RREQ pertama untuk ID ini, mulai timer
-        if (m_eocwPathTimers.find(id) == m_eocwPathTimers.end())
+        if (m_eocwPathTimers.find(id) == m_eocwPathTimers.end()) // Jika timer belum ada
         {
-            // Set timer (misal: 10ms) untuk mengumpulkan RREQ lain
-            //Time waitTime = MilliSeconds(10); // <-- Terlalu lama untuk 20 m/s
-            Time waitTime = MilliSeconds(20); // <-- Coba 1ms
+            Time waitTime = MilliSeconds(20); // Tunggu 20ms untuk kandidat lain
+            
+            // Atur fungsi callback timer dengan benar
             m_eocwPathTimers[id].SetFunction(&RoutingProtocol::SelectBestEocwPath, this);
             m_eocwPathTimers[id].SetArguments(id, origin, rreqHeader.GetDst());
-            m_eocwPathTimers[id].Schedule(waitTime);
+            m_eocwPathTimers[id].SetDelay(waitTime);
+            m_eocwPathTimers[id].Schedule(); // Jalankan timer
+            
             NS_LOG_INFO("EOCW (Node " << m_ipv4->GetObject<Node>()->GetId() << "): Memulai timer " << waitTime.GetMilliSeconds() << "ms untuk RREQ " << id);
         }
-        return; // PENTING: Jangan teruskan RREQ
+        return; // PENTING: Jangan teruskan RREQ, karena kita adalah tujuan
     }
-    /*
-     * (ii) or it has an active route to the destination, the destination sequence number in the
-     * node's existing route table entry for the destination is valid and greater than or equal to
-     * the Destination Sequence Number of the RREQ, and the "destination only" flag is NOT set.
-     */
+
+    // --- FORWARDING LOGIKA (Intermediate Node) ---
+    
+    // Cek apakah kita punya rute aktif ke tujuan (Optimization Gratuitous RREP)
     RoutingTableEntry toDst;
     Ipv4Address dst = rreqHeader.GetDst();
     if (m_routingTable.LookupRoute(dst, toDst))
     {
-        /*
-         * Drop RREQ, This node RREP will make a loop.
-         */
         if (toDst.GetNextHop() == src)
         {
             NS_LOG_DEBUG("Drop RREQ from " << src << ", dest next hop " << toDst.GetNextHop());
             return;
         }
-        /*
-         * The Destination Sequence number for the requested destination is set to the maximum of
-         * the corresponding value received in the RREQ message, and the destination sequence value
-         * currently maintained by the node for the requested destination. However, the forwarding
-         * node MUST NOT modify its maintained value for the destination sequence number, even if
-         * the value received in the incoming RREQ is larger than the value currently maintained by
-         * the forwarding node.
-         */
         if ((rreqHeader.GetUnknownSeqno() ||
              (int32_t(toDst.GetSeqNo()) - int32_t(rreqHeader.GetDstSeqno()) >= 0)) &&
             toDst.GetValidSeqNo())
@@ -1564,6 +1549,7 @@ RoutingProtocol::RecvRequest(Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sr
         }
     }
 
+    // TTL check
     SocketIpTtlTag tag;
     p->RemovePacketTag(tag);
     if (tag.GetTtl() < 2)
@@ -1572,6 +1558,12 @@ RoutingProtocol::RecvRequest(Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sr
         return;
     }
 
+    // --- UPDATE HEADER UNTUK FORWARDING ---
+    rreqHeader.SetHopCount(hop); // Update Hop Count
+    rreqHeader.m_pathMinEnergy = new_pathMinEnergy; // Update Energy
+    rreqHeader.m_pathAvgCongestion = new_pathAvgCongestion; // Update Congestion
+
+    // Re-broadcast RREQ
     for (auto j = m_socketAddresses.begin(); j != m_socketAddresses.end(); ++j)
     {
         Ptr<Socket> socket = j->first;
@@ -1583,7 +1575,7 @@ RoutingProtocol::RecvRequest(Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sr
         packet->AddHeader(rreqHeader);
         TypeHeader tHeader(AODVTYPE_RREQ);
         packet->AddHeader(tHeader);
-        // Send to all-hosts broadcast if on /32 addr, subnet-directed otherwise
+        
         Ipv4Address destination;
         if (iface.GetMask() == Ipv4Mask::GetOnes())
         {
@@ -2629,7 +2621,22 @@ RoutingProtocol::GetFuzzyWeights(double re, double cd)
 {
     // re = Residual Energy Score (0.0 - 1.0)
     // cd = Congestion Degree Score (0.0 - 1.0, makin besar makin TIDAK macet/Free)
-    
+    // --- MODE 1: AODV-EOCW ORIGINAL (PAPER) ---
+    // Menggunakan Threshold Statis (80%, 50%, 30%)
+    if (!m_enableFuzzy) 
+    {
+        // Bobot hardcoded sesuai Paper (Persamaan 3 & Halaman 7)
+        // A1 (>80%): {0.5396, 0.297, 0.1634} (CD, RE, Hop)
+        if (re > 0.8) return {0.5396, 0.297, 0.1634};
+        
+        // A2 (>50%): {0.637, 0.2583, 0.1047}
+        else if (re > 0.5) return {0.637, 0.2583, 0.1047};
+        
+        // A3 (<50% / <30%): {0.7514, 0.1782, 0.0704}
+        // Paper bilang <30% pakai A3, tapi range 30-50 tidak didefinisikan jelas.
+        // Kita asumsikan <50% pakai A3 agar aman.
+        else return {0.7514, 0.1782, 0.0704};
+    }
     // 1. FUZZIFICATION (Mengubah input jadi derajat keanggotaan)
     
     // Energy (Low, Medium, High)
@@ -2695,12 +2702,17 @@ RoutingProtocol::GetFuzzyWeights(double re, double cd)
     finalWeights.push_back(w_energy / total_fire);     // Index 1: RE
     finalWeights.push_back(w_hop / total_fire);        // Index 2: Hop
     
-    // Debugging (Optional, biar kelihatan di log saat simulasi)
-    NS_LOG_INFO("FUZZY OUTPUT | Energy: " << re << " Congestion: " << cd 
-                << " -> Weights [CD:" << finalWeights[0] 
-                << ", RE:" << finalWeights[1] 
-                << ", Hop:" << finalWeights[2] << "]");
 
+    // === TAMBAHKAN INI UNTUK CEK APAKAH BERUBAH ===
+    static int debug_limit = 0;
+    if (debug_limit < 10) { // Hanya print 10 kali biar terminal tidak banjir
+        std::cout << "DEBUG_WEIGHTS | Mode: " << (m_enableFuzzy ? "FUZZY (Usulan)" : "PAPER (Statis)")
+                  << " | Energy: " << re 
+                  << " | Weights [CD, RE, Hop]: " 
+                  << finalWeights[0] << ", " << finalWeights[1] << ", " << finalWeights[2] << std::endl;
+        debug_limit++;
+    }
+    // ===============================================
     return finalWeights;
 }
 
@@ -2712,8 +2724,20 @@ void
 RoutingProtocol::SelectBestEocwPath(uint32_t rreqId, Ipv4Address origin, Ipv4Address destination)
 {
   NS_LOG_INFO("EOCW (Node " << m_ipv4->GetObject<Node>()->GetId() << "): Timer berakhir. Memilih rute terbaik untuk RREQ ID " << rreqId);
-  
+  // --- TAMBAHAN DEBUGGING ---
   auto it = m_eocwPathCache.find(rreqId);
+  size_t candidateCount = (it != m_eocwPathCache.end()) ? it->second.size() : 0;
+
+  std::cout << "DEBUG_EOCW [Node " << m_ipv4->GetObject<Node>()->GetId() << "]: "
+            << "Timer Expired for RREQ ID " << rreqId 
+            << ". Candidates Found: " << candidateCount << std::endl;
+  
+  if (candidateCount > 1) {
+      std::cout << "  -> SUCCESS! Multi-path ditemukan. Fuzzy Logic akan bekerja efektif." << std::endl;
+  } else {
+      std::cout << "  -> WARNING! Hanya 1 path. Fuzzy Logic tidak punya pilihan." << std::endl;
+  }
+  // --------------------------
   if (it == m_eocwPathCache.end() || it->second.empty())
   {
     NS_LOG_WARN("EOCW Timer berakhir, tapi tidak ada path di cache untuk RREQ " << rreqId);

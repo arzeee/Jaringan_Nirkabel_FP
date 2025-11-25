@@ -1,7 +1,8 @@
 /*
- * AODV-EOCW Stress Test Simulation (Randomized Energy)
- * * Tujuan: Memberikan variasi energi awal (Heterogen) agar hasil survival rate
- * * lebih realistis dan bisa dibandingkan (tidak 0% atau 100%).
+ * AODV-EOCW Simulation (Safe Virtual Battery Strategy)
+ * * Status: COMPILER-SAFE & CRASH-FREE.
+ * * Metode: Memberikan energi tak terbatas ke NS-3 (Anti-Crash),
+ * * lalu mematikan logika Network saat batas energi 'Real' tercapai.
  */
 
 #include "ns3/aodv-helper.h"
@@ -14,12 +15,15 @@
 #include "ns3/ssid.h"
 #include "ns3/basic-energy-source-helper.h"
 #include "ns3/basic-energy-source.h" 
+#include "ns3/energy-source.h" 
 #include "ns3/wifi-radio-energy-model-helper.h"
 #include "ns3/netanim-module.h"
 #include "ns3/network-module.h"
 #include "ns3/flow-monitor-helper.h"
 #include "ns3/flow-monitor.h"
 #include "ns3/ipv4-flow-classifier.h"
+#include "ns3/on-off-helper.h"
+#include "ns3/packet-sink-helper.h"
 #include <string>
 #include <vector>
 
@@ -30,40 +34,42 @@ NS_LOG_COMPONENT_DEFINE("AodvEocwStressTest");
 
 // --- GLOBAL VARIABLES ---
 std::vector<bool> isNodeDead;
-std::vector<double> nodeRealEnergyLimit; // Batas energi unik tiap node
-double FAKE_INITIAL_ENERGY = 1000000.0;  // Energi tak terbatas untuk PHY
+std::vector<double> nodeRealEnergyLimit; // Batas energi 'Real'
+double FAKE_INITIAL_ENERGY = 1000000000.0; // 1 Milyar Joule (Infinite)
 
-// Fungsi Soft Kill
+// Fungsi Mematikan Logika Node (Soft Kill)
 void SoftKillNode(Ptr<Node> node)
 {
     uint32_t id = node->GetId();
     if (isNodeDead[id]) return; 
 
-    NS_LOG_UNCOND("DEBUG: Node " << id << " Mati (Batas Energi " << nodeRealEnergyLimit[id] << "J Tercapai).");
+    // NS_LOG_UNCOND("DEBUG: Node " << id << " Mati Kehabisan Energi (Limit Asli Tercapai).");
     
     isNodeDead[id] = true; 
 
-    // Matikan App
-    for (uint32_t i = 0; i < node->GetNApplications(); ++i)
-    {
+    // 1. Hentikan Aplikasi
+    for (uint32_t i = 0; i < node->GetNApplications(); ++i) {
         node->GetApplication(i)->SetStopTime(Simulator::Now());
     }
 
-    // Matikan IPv4
+    // 2. Putuskan Koneksi IPv4
+    // Node akan berhenti mengirim/menerima paket routing.
     Ptr<Ipv4> ipv4 = node->GetObject<Ipv4>();
-    if (ipv4 && ipv4->GetNInterfaces() > 1)
-    {
+    if (ipv4 && ipv4->GetNInterfaces() > 1) {
         ipv4->SetDown(1); 
     }
+    
+    // PENTING: Radio PHY tidak disentuh, tetap hidup (Zombie) supaya tidak Crash.
 }
 
-// Handler Energi Real-time
+// Handler Perubahan Energi
 void EnergyChangeHandler(Ptr<Node> node, double oldValue, double newValue)
 {
-    uint32_t id = node->GetId();
+    // Hitung konsumsi real
     double consumed = FAKE_INITIAL_ENERGY - newValue;
+    uint32_t id = node->GetId();
 
-    // Cek terhadap batas energi KHUSUS node ini
+    // Jika konsumsi melebihi batas 'Real' yang kita tentukan -> Matikan Node
     if (consumed >= nodeRealEnergyLimit[id] && !isNodeDead[id])
     {
         SoftKillNode(node);
@@ -72,43 +78,39 @@ void EnergyChangeHandler(Ptr<Node> node, double oldValue, double newValue)
 
 int main(int argc, char* argv[])
 {
-    uint32_t numNodes = 50;
-    double simTime = 100.0;
+    bool useFuzzy = true;
+    uint32_t numNodes = 30;
+    double simTime = 200.0;
     double nodeSpeed = 10.0;
+    double arenaSize = 1000.0;
     
-    // Range Energi Acak (Min - Max)
-    double minEnergy = 60.0; 
-    double maxEnergy = 100.0;
-
-    double arenaX = 500.0;
-    double arenaY = 500.0;
-    uint32_t numFlows = 5;
-    std::string protocolName = "AODV-EOCW"; 
+    // Range Energi Kritis (15J - 35J) agar Fuzzy Logic "panik"
+    double minEnergy = 15.0; 
+    double maxEnergy = 35.0;
+    
+    uint32_t numFlows = 10;
 
     CommandLine cmd(__FILE__);
-    cmd.AddValue("numNodes", "Jumlah node", numNodes);
-    cmd.AddValue("simTime", "Waktu simulasi (detik)", simTime);
-    cmd.AddValue("numFlows", "Jumlah aliran trafik (UDP)", numFlows);
-    cmd.AddValue("minEnergy", "Energi minimal acak (Joule)", minEnergy);
-    cmd.AddValue("maxEnergy", "Energi maksimal acak (Joule)", maxEnergy);
+    cmd.AddValue("useFuzzy", "Use Fuzzy Logic", useFuzzy);
+    cmd.AddValue("numNodes", "Number of Nodes", numNodes);
+    cmd.AddValue("speed", "Node Speed", nodeSpeed);
+    cmd.AddValue("simTime", "Simulation Time", simTime);
+    cmd.AddValue("energyMin", "Min Random Energy", minEnergy);
+    cmd.AddValue("energyMax", "Max Random Energy", maxEnergy);
     cmd.Parse(argc, argv);
 
-    isNodeDead.assign(numNodes, false);
+    // Timeout Pendek agar sering Re-Routing
+    Config::SetDefault("ns3::aodv::RoutingProtocol::ActiveRouteTimeout", TimeValue(Seconds(3.0)));
 
-    // --- GENERATE RANDOM ENERGY LIMITS ---
-    // Agar simulasi lebih realistis, setiap node punya baterai beda-beda
+    isNodeDead.assign(numNodes, false);
+    
+    // Generate Batas Energi 'Real'
     Ptr<UniformRandomVariable> energyRng = CreateObject<UniformRandomVariable>();
     energyRng->SetAttribute("Min", DoubleValue(minEnergy));
     energyRng->SetAttribute("Max", DoubleValue(maxEnergy));
-    
-    // Set seed agar random-nya konsisten (reproducible) tiap kali run
     energyRng->SetStream(1); 
+    for(uint32_t i=0; i<numNodes; i++) nodeRealEnergyLimit.push_back(energyRng->GetValue());
 
-    for(uint32_t i=0; i<numNodes; i++) {
-        nodeRealEnergyLimit.push_back(energyRng->GetValue());
-    }
-
-    // --- SETUP NODE & WIFI (SAMA SEPERTI SEBELUMNYA) ---
     NodeContainer nodes;
     nodes.Create(numNodes);
 
@@ -119,11 +121,13 @@ int main(int argc, char* argv[])
     WifiMacHelper mac;
     mac.SetType("ns3::AdhocWifiMac");
     WifiHelper wifi;
-    wifi.SetStandard(WIFI_STANDARD_80211g); 
+    wifi.SetStandard(WIFI_STANDARD_80211g);
     wifi.SetRemoteStationManager("ns3::ConstantRateWifiManager", "DataMode", StringValue("ErpOfdmRate6Mbps"), "ControlMode", StringValue("ErpOfdmRate6Mbps"));
     NetDeviceContainer devices = wifi.Install(phy, mac, nodes);
 
+    // INSTALL ENERGI PALSU (INFINITE)
     BasicEnergySourceHelper basicEnergySourceHelper;
+    // Pasang 1 Milyar Joule ke simulator
     basicEnergySourceHelper.Set("BasicEnergySourceInitialEnergyJ", DoubleValue(FAKE_INITIAL_ENERGY));
     EnergySourceContainer energySources = basicEnergySourceHelper.Install(nodes);
 
@@ -132,25 +136,28 @@ int main(int argc, char* argv[])
     radioEnergyModelHelper.Set("RxCurrentA", DoubleValue(0.0197));
     radioEnergyModelHelper.Install(devices, energySources);
 
-    for (uint32_t i = 0; i < numNodes; i++)
-    {
-        Ptr<BasicEnergySource> basicSource = DynamicCast<BasicEnergySource>(energySources.Get(i));
-        basicSource->TraceConnectWithoutContext("RemainingEnergy", MakeBoundCallback(&EnergyChangeHandler, nodes.Get(i)));
+    // PASANG MONITOR
+    for (uint32_t i = 0; i < numNodes; i++) {
+        // Kita casting ke BasicEnergySource agar TraceConnect aman
+        Ptr<BasicEnergySource> es = DynamicCast<BasicEnergySource>(energySources.Get(i));
+        es->TraceConnectWithoutContext("RemainingEnergy", MakeBoundCallback(&EnergyChangeHandler, nodes.Get(i)));
+        
+        // Kita TIDAK memanggil SetEnergyDepletionCallback lagi (Sumber masalah kompilasi)
     }
 
     MobilityHelper mobility;
     mobility.SetPositionAllocator("ns3::RandomRectanglePositionAllocator",
-                                  "X", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=" + std::to_string(arenaX) + "]"),
-                                  "Y", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=" + std::to_string(arenaY) + "]"));
+                                  "X", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=" + std::to_string(arenaSize) + "]"),
+                                  "Y", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=" + std::to_string(arenaSize) + "]"));
     mobility.SetMobilityModel("ns3::RandomWaypointMobilityModel",
-                              "Speed", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=" + std::to_string(nodeSpeed) + "]"),
-                              "Pause", StringValue("ns3::ConstantRandomVariable[Constant=2.0]"),
+                              "Speed", StringValue("ns3::UniformRandomVariable[Min=" + std::to_string(nodeSpeed-1.0) + "|Max=" + std::to_string(nodeSpeed+1.0) + "]"),
+                              "Pause", StringValue("ns3::ConstantRandomVariable[Constant=0.0]"),
                               "PositionAllocator", PointerValue(CreateObject<RandomRectanglePositionAllocator>()));
     mobility.Install(nodes);
 
     AodvHelper aodv;
     aodv.Set("DestinationOnly", BooleanValue(true)); 
-    aodv.Set("EnableHello", BooleanValue(true)); 
+    aodv.Set("EnableFuzzy", BooleanValue(useFuzzy)); 
     InternetStackHelper stack;
     stack.SetRoutingHelper(aodv);
     stack.Install(nodes);
@@ -159,50 +166,53 @@ int main(int argc, char* argv[])
     address.SetBase("10.1.1.0", "255.255.255.0");
     Ipv4InterfaceContainer interfaces = address.Assign(devices);
 
+    // TRAFIK ON/OFF (Intermittent)
     uint16_t port = 9;
     Ptr<UniformRandomVariable> rnd = CreateObject<UniformRandomVariable>();
     rnd->SetAttribute("Min", DoubleValue(0.0));
     rnd->SetAttribute("Max", DoubleValue(numNodes - 1));
+    rnd->SetStream(2); 
+
+    OnOffHelper onoff("ns3::UdpSocketFactory", Address());
+    // Kirim 5 detik, Diam 5 detik -> Memicu Re-Routing
+    onoff.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=5.0]"));
+    onoff.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=5.0]"));
+    onoff.SetAttribute("DataRate", StringValue("64kbps")); 
+    onoff.SetAttribute("PacketSize", UintegerValue(512));
+
     ApplicationContainer clientApps, serverApps;
 
     for (uint32_t i = 0; i < numFlows; ++i)
     {
-        uint32_t srcNode = (uint32_t)rnd->GetValue();
-        uint32_t dstNode = (uint32_t)rnd->GetValue();
-        while (srcNode == dstNode) dstNode = (uint32_t)rnd->GetValue();
+        uint32_t src = (uint32_t)rnd->GetValue();
+        uint32_t dst = (uint32_t)rnd->GetValue();
+        while (src == dst) dst = (uint32_t)rnd->GetValue();
 
-        UdpEchoServerHelper server(port);
-        serverApps.Add(server.Install(nodes.Get(dstNode)));
-        UdpEchoClientHelper client(interfaces.GetAddress(dstNode), port);
-        client.SetAttribute("MaxPackets", UintegerValue(100)); 
-        client.SetAttribute("Interval", TimeValue(Seconds(0.5))); 
-        client.SetAttribute("PacketSize", UintegerValue(512)); 
+        PacketSinkHelper sink("ns3::UdpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), port));
+        serverApps.Add(sink.Install(nodes.Get(dst)));
+
+        AddressValue remoteAddress(InetSocketAddress(interfaces.GetAddress(dst), port));
+        onoff.SetAttribute("Remote", remoteAddress);
+        clientApps.Add(onoff.Install(nodes.Get(src)));
         
-        Time startTime = Seconds(1.0 + i * 2.0); 
-        clientApps.Add(client.Install(nodes.Get(srcNode)));
-        clientApps.Get(i)->SetStartTime(startTime);
-        clientApps.Get(i)->SetStopTime(Seconds(simTime - 1.0));
+        double startT = 1.0 + i * 1.0; 
+        clientApps.Get(i)->SetStartTime(Seconds(startT));
+        clientApps.Get(i)->SetStopTime(Seconds(simTime - 2.0));
+        
         port++;
     }
-    
     serverApps.Start(Seconds(0.5));
-    serverApps.Stop(Seconds(simTime));
 
     FlowMonitorHelper flowmon;
     Ptr<FlowMonitor> monitor = flowmon.InstallAll();
-    LogComponentEnable("AodvRoutingProtocol", LOG_LEVEL_INFO);
-
-    NS_LOG_INFO("Memulai Simulasi " << protocolName << " (Random Energy " << minEnergy << "-" << maxEnergy << "J)...");
-
+    
     Simulator::Stop(Seconds(simTime));
     Simulator::Run();
 
     monitor->CheckForLostPackets();
     std::map<FlowId, FlowMonitor::FlowStats> stats = monitor->GetFlowStats();
-
     double totalTx = 0, totalRx = 0, totalDelay = 0, totalThroughput = 0;
-    for (auto i = stats.begin(); i != stats.end(); ++i)
-    {
+    for (auto i = stats.begin(); i != stats.end(); ++i) {
         totalTx += i->second.txPackets;
         totalRx += i->second.rxPackets;
         if (i->second.rxPackets > 0) {
@@ -214,14 +224,16 @@ int main(int argc, char* argv[])
 
     double totalConsumedEnergy = 0;
     uint32_t deadNodes = 0;
-    for (uint32_t i = 0; i < numNodes; ++i)
-    {
+    for (uint32_t i = 0; i < numNodes; ++i) {
+        // Ambil sisa energi palsu
         double fakeRemaining = energySources.Get(i)->GetRemainingEnergy();
+        // Hitung konsumsi
         double consumed = FAKE_INITIAL_ENERGY - fakeRemaining;
         
-        if (isNodeDead[i]) {
+        // Cek terhadap limit REAL
+        if (isNodeDead[i] || consumed >= nodeRealEnergyLimit[i]) {
             deadNodes++;
-            totalConsumedEnergy += nodeRealEnergyLimit[i]; // Hitung full limit
+            totalConsumedEnergy += nodeRealEnergyLimit[i]; // Max energy (habis)
         } else {
             totalConsumedEnergy += consumed;
         }
@@ -229,16 +241,17 @@ int main(int argc, char* argv[])
 
     double avgPdr = (totalTx > 0) ? (totalRx / totalTx) * 100.0 : 0.0;
     double avgDelayMs = (totalRx > 0) ? (totalDelay / totalRx) * 1000.0 : 0.0;
+    double avgThroughput = (stats.size() > 0) ? totalThroughput : 0.0; 
     double survivalRate = ((double)(numNodes - deadNodes) / numNodes) * 100.0;
 
-    std::cout << "\n============ HASIL AKHIR ============" << std::endl;
-    std::cout << "Range Energi:         " << minEnergy << " - " << maxEnergy << " J" << std::endl;
-    std::cout << "PDR (Delivery Rate):  " << avgPdr << " %" << std::endl;
-    std::cout << "Survival Rate:        " << survivalRate << " % (" << deadNodes << " mati)" << std::endl;
-    std::cout << "Rata-rata Delay:      " << avgDelayMs << " ms" << std::endl;
-    std::cout << "Total Throughput:     " << totalThroughput << " Kbps" << std::endl;
-    std::cout << "Total Energi Terpakai:" << totalConsumedEnergy << " J" << std::endl;
-    std::cout << "=====================================" << std::endl;
+    std::cout << (useFuzzy ? "Modified_Fuzzy" : "Original_Paper") << ","
+              << nodeSpeed << ","
+              << numNodes << ","
+              << avgPdr << ","
+              << avgDelayMs << ","
+              << survivalRate << ","
+              << totalConsumedEnergy << ","
+              << avgThroughput << std::endl;
 
     Simulator::Destroy();
     return 0;
