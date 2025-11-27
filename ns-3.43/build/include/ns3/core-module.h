@@ -6,7 +6,6 @@
     #include <ns3/config-store-config.h>
     #include <ns3/core-config.h>
     #include <ns3/int64x64-128.h>
-    #include <ns3/example-as-test.h>
     #include <ns3/csv-reader.h>
     #include <ns3/event-garbage-collector.h>
     #include <ns3/random-variable-stream-helper.h>

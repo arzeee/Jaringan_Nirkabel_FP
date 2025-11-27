@@ -86,9 +86,3 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     )
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/user/ns-allinone-3.43/ns-3.43/cmake-cache/src/propagation/examples/cmake_install.cmake")
-
-endif()
-

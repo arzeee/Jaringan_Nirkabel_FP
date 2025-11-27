@@ -70,7 +70,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     "/home/user/ns-allinone-3.43/ns-3.43/build/include/ns3/config-store-config.h"
     "/home/user/ns-allinone-3.43/ns-3.43/build/include/ns3/core-config.h"
     "/home/user/ns-allinone-3.43/ns-3.43/src/core/model/int64x64-128.h"
-    "/home/user/ns-allinone-3.43/ns-3.43/src/core/model/example-as-test.h"
     "/home/user/ns-allinone-3.43/ns-3.43/src/core/helper/csv-reader.h"
     "/home/user/ns-allinone-3.43/ns-3.43/src/core/helper/event-garbage-collector.h"
     "/home/user/ns-allinone-3.43/ns-3.43/src/core/helper/random-variable-stream-helper.h"
@@ -173,11 +172,5 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     "/home/user/ns-allinone-3.43/ns-3.43/src/core/model/matrix-array.h"
     "/home/user/ns-allinone-3.43/ns-3.43/build/include/ns3/core-module.h"
     )
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/user/ns-allinone-3.43/ns-3.43/cmake-cache/src/core/examples/cmake_install.cmake")
-
 endif()
 
