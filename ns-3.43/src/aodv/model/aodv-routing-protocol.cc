@@ -1152,8 +1152,10 @@ std::vector<double> RoutingProtocol::GetFuzzyWeights(double re, double cd_score)
         // === ORIGINAL PAPER / STATIC AHP LOGIC ===
         if (re >= 0.8) return {0.5396, 0.297, 0.1634};
         else if (re >= 0.5) return {0.637, 0.2583, 0.1047};
-        else if (re <= 0.3) return {0.7514, 0.1782, 0.0704}; // Flawed Paper Logic: Favors congestion over energy when low
-        else return {0.0, 0.0, 1.0}; // Blind spot fallback
+        // Flawed Paper Logic: Favors congestion over energy when low
+        else if (re <= 0.3) return {0.7514, 0.1782, 0.0704}; 
+        // Blind spot fallback
+        else return {0.0, 0.0, 1.0}; 
     }
 
     // === MODIFIED FUZZY LOGIC (9 RULES) ===
@@ -1167,7 +1169,8 @@ std::vector<double> RoutingProtocol::GetFuzzyWeights(double re, double cd_score)
 
     double w_cd_num = 0.0, w_re_num = 0.0, w_hc_num = 0.0, total_fire = 0.0;
     auto AddRule = [&](double fireStrength, double out_cd, double out_re, double out_hc) {
-        w_cd_num += fireStrength * out_cd; w_re_num += fireStrength * out_re; w_hc_num += fireStrength * out_hc; total_fire += fireStrength;
+        w_cd_num += fireStrength * out_cd; w_re_num += fireStrength * out_re; w_hc_num 
+        += fireStrength * out_hc; total_fire += fireStrength;
     };
 
     AddRule(std::min(re_low, cd_busy), 0.45, 0.50, 0.05);
